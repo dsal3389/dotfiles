@@ -1,3 +1,4 @@
 
 feh --bg-scale $HOME/.config/wallpaper.jpg &
+picom --experimental-backends & 
 

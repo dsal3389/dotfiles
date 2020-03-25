@@ -1,0 +1,3 @@
+
+feh --bg-scale $HOME/.config/wallpaper.jpg &
+

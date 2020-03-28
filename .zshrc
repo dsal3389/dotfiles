@@ -1,4 +1,4 @@
-export ZSH="/home/dsal3389_/.oh-my-zsh"
+export ZSH="${HOME}/.config/.oh-my-zsh"
 export LANG=en_US.UTF-8
 export UPDATE_ZSH_DAYS=7
 

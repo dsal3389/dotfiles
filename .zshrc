@@ -13,10 +13,6 @@ HISTFILE=$HOME/.cache/zsh/history
 ENABLE_CORRECTION="true"
 ZSH_THEME="nebirhos"
 
-# alias
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
-
-
 plugins=(git)
 
 [[ -n $DISPLAY ]] && plugins=("$plugins[@]" zsh-autosuggestions)
@@ -25,10 +21,11 @@ source $ZSH/oh-my-zsh.sh
 export PATH=$HOME/.local/bin:$PATH
 export EDITOR='vim'
 
-
-ZSH_SYN_HIGH=/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+ALIASES_FILE=$HOME/.config/zsh-aliases
+[ -f "$ALIASES_FILE" ] && source  "$ALIASES_FILE"
 
 # pacman -S zsh-syntax-highlighting
+ZSH_SYN_HIGH=/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 [ -f "$ZSH_SYN_HIGH" ] && source "$ZSH_SYN_HIGH" 2> /dev/null
 
 

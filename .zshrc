@@ -19,7 +19,8 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 export PATH=$HOME/.local/bin:$PATH
-export EDITOR='vim'
+export EDITOR=vim
+export BROWSER=brave 
 
 ALIASES_FILE=$HOME/.config/zsh-aliases
 [ -f "$ALIASES_FILE" ] && source  "$ALIASES_FILE"

@@ -8,6 +8,7 @@ BASE_PACKEGES=(
 	picom
 	feh
 	kitty
+	zsh
 )
 EXTRA_PACKEGES=(
 	linux-headers
@@ -39,6 +40,10 @@ ask "install fonts?" && sudo pacman -S --needed --noconfirm -cc $(pacman -Ssq no
 ask "install base packeges?" && sudo pacman -S --needed --noconfirm -cc $BASE_PACKEGES
 ask "install yay (AUR packege helper)?" && install_yay
 
+chsh -s /bin/bash $(whoami)
+ask "would u like to proseed now with OH-MY-ZSH?" && sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 cp -rf "${DOTFILES}/.config/*" "${HOME}/.config"
 cp -rf "${DOTFILES}/*" "${HOME}"
+
 

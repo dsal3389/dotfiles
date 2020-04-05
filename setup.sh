@@ -39,6 +39,6 @@ ask "install fonts?" && sudo pacman -S --needed --noconfirm -cc $(pacman -Ssq no
 ask "install base packeges?" && sudo pacman -S --needed --noconfirm -cc $BASE_PACKEGES
 ask "install yay (AUR packege helper)?" && install_yay
 
-! mv -f "${DOTFILES}/.config/*" "${HOME}/.config" 2> /dev/null && echo "failed copy from ${DOTFILES}/.config to ${HOME}/.config"
-! mv -f "${DOTFILES}/*" "${HOME}" 2> /dev/null && echo "failed copy from ${DOTFILES} to ${HOME}"
+cp -rf "${DOTFILES}/.config/*" "${HOME}/.config"
+cp -rf "${DOTFILES}/*" "${HOME}"
 

@@ -45,8 +45,9 @@ ask "install yay (AUR packege helper)?" && install_yay
 cp -rf $DOTFILES/.config/* "${HOME}/.config" 1> /dev/null
 cp -rf $DOTFILES/* $HOME 1> /dev/null
 
-chsh -s /bin/bash $(whoami)
-ask "would u like to proseed now with OH-MY-ZSH?" && sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+chsh -s $(which zsh) $(whoami)
+ask "would u like to proseed now with OH-MY-ZSH?" && \
+	git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.config/.oh-my-zsh
 
 
 

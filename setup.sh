@@ -9,6 +9,7 @@ BASE_PACKEGES=(
 	feh
 	kitty
 	zsh
+	dmenu
 )
 EXTRA_PACKEGES=(
 	linux-headers
@@ -36,14 +37,16 @@ install_yay(){
 }
 
 
-ask "install fonts?" && sudo pacman -S --needed --noconfirm -cc $(pacman -Ssq noto-)
-ask "install base packeges?" && sudo pacman -S --needed --noconfirm -cc $BASE_PACKEGES
+ask "install fonts?" && sudo pacman -S --noconfirm $(pacman -Ssq noto-)
+ask "install base packeges?" && sudo pacman -S --noconfirm $BASE_PACKEGES
 ask "install yay (AUR packege helper)?" && install_yay
+
+[ ! -d "${HOME}/.config" ] && mkdir "${HOME}/.config"
+cp -rf $DOTFILES/.config/* "${HOME}/.config" 1> /dev/null
+cp -rf $DOTFILES/* $HOME 1> /dev/null
 
 chsh -s /bin/bash $(whoami)
 ask "would u like to proseed now with OH-MY-ZSH?" && sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-cp -rf "${DOTFILES}/.config/*" "${HOME}/.config"
-cp -rf "${DOTFILES}/*" "${HOME}"
 
 

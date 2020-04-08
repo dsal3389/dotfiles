@@ -1,6 +1,7 @@
 #! /bin/bash
 
 
+OHMYZSH="https://github.com/ohmyzsh/ohmyzsh.git"
 YAY="https://aur.archlinux.org/yay.git"
 DOTFILES=$HOME/dotfiles # installed dotfiles
 BASE_PACKEGES=(
@@ -10,6 +11,8 @@ BASE_PACKEGES=(
 	kitty
 	zsh
 	dmenu
+	vifm
+	w3m
 )
 EXTRA_PACKEGES=(
 	linux-headers
@@ -47,7 +50,7 @@ cp -rf $DOTFILES/* $HOME 1> /dev/null
 
 chsh -s $(which zsh) $(whoami)
 ask "would u like to proseed now with OH-MY-ZSH?" && \
-	git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.config/.oh-my-zsh
+	git clone $OHMYZSH ~/.config/.oh-my-zsh
 
 
 

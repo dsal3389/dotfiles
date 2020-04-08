@@ -1,7 +1,7 @@
 #!/bin/sh
 
 xprofile=$HOME/.xprofile
-userresources=$HOME/.Xdefaults
+userresources=$HOME/.Xresources
 
 [ -f "$xprofile" ] && . "$xprofile"
 [ -f "$userresources" ] && xrdb -merge "$userresources"

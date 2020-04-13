@@ -1,8 +1,4 @@
 
-set nocompatible
 filetype plugin on
 syntax on
-
-autocmd FileType html inoremap ;div <div></div><Esc>F<i
-
 

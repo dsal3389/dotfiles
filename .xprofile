@@ -1,4 +1,6 @@
 
 feh --no-fehbg --bg-scale $HOME/.config/wallpaper.jpg &
-picom --experimental-backends & 
+deadd-notification-centera &
+udiskie -n &
+compton & 
 

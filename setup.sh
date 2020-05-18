@@ -4,15 +4,18 @@
 OHMYZSH="https://github.com/ohmyzsh/ohmyzsh.git"
 YAY="https://aur.archlinux.org/yay.git"
 DOTFILES=$HOME/dotfiles # installed dotfiles
+YAY_INSTALLED=`command -v yay`
 BASE_PACKEGES=(
 	i3
-	picom
 	feh
 	kitty
 	zsh
 	dmenu
 	vifm
 	w3m
+)
+AUR_PACKEGES=(
+	compton-tryone-git
 )
 EXTRA_PACKEGES=(
 	linux-headers
@@ -37,12 +40,21 @@ install_yay(){
 	git clone "${YAY}"
 	cd yay && makepkg -si
 	cd .. && rm -rf yay	
+	$YAY_INSTALLED=true
 }
 
 
 ask "install fonts?" && sudo pacman -S --noconfirm $(pacman -Ssq noto-)
 ask "install base packeges?" && sudo pacman -S --noconfirm $BASE_PACKEGES
-ask "install yay (AUR packege helper)?" && install_yay
+if [ ! $YAY_INSTALLED ];
+then
+	ask "install yay (AUR packege helper)?" && install_yay
+fi
+
+if [ $YAY_INSTALLED ];
+then
+	ask "install AUR packeges?" && yay -S $AUR_PACKEGES
+fi
 
 [ ! -d "${HOME}/.config" ] && mkdir "${HOME}/.config"
 cp -rf $DOTFILES/.config/* "${HOME}/.config" 1> /dev/null

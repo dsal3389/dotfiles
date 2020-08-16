@@ -3,4 +3,3 @@ feh --no-fehbg --bg-scale $HOME/.config/wallpaper.jpg &
 deadd-notification-centera &
 udiskie -n &
 compton & 
-

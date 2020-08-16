@@ -127,8 +127,16 @@ bar {
         status_command i3status
 }
 
-for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 1
 
 gaps inner 7
 gaps outer 8
 
+set_from_resource $black i3wm.color0 #00000
+set_from_resource $red	i3wm.color9 #ff0000
+set_from_resource $pink	i3wm.color13 #000 
+set_from_resource $purp	i3wm.color14 #000
+
+client.focused $pink $pink $pink $black	
+client.unfocused $purp $purp $pink $purp
+client.focused_inactive $purp $purp $punk $purp

@@ -64,12 +64,14 @@ then
 	ask "install AUR packeges?" && yay -S $AUR_PACKEGES
 fi
 
+mkdir ${HOME}/.config
+ask "would u like to proseed now with OH-MY-ZSH?" && \
+	git clone $OHMYZSH ~/.config/.oh-my-zsh
+
 [ ! -d "${HOME}/.config" ] && mkdir "${HOME}/.config"
 cp -rf $DOTFILES/.config/* "${HOME}/.config" 1> /dev/null
 cp -rf $DOTFILES/* $HOME 1> /dev/null
 
-ask "would u like to proseed now with OH-MY-ZSH?" && \
-	git clone $OHMYZSH ~/.config/.oh-my-zsh
 
 chsh -s $(which zsh) $(whoami)
 

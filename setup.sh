@@ -45,7 +45,11 @@ install_yay(){
 
 
 ask "install fonts?" && sudo pacman -S --noconfirm $(pacman -Ssq noto-)
+sleep 1
+
 ask "install base packeges?" && sudo pacman -S --noconfirm $BASE_PACKEGES
+sleep 1
+
 if [ ! $YAY_INSTALLED ];
 then
 	ask "install yay (AUR packege helper)?" && install_yay
@@ -53,6 +57,7 @@ fi
 
 if [ $YAY_INSTALLED ];
 then
+	sleep 1
 	ask "install AUR packeges?" && yay -S $AUR_PACKEGES
 fi
 

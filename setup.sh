@@ -68,9 +68,8 @@ fi
 cp -rf $DOTFILES/.config/* "${HOME}/.config" 1> /dev/null
 cp -rf $DOTFILES/* $HOME 1> /dev/null
 
-chsh -s $(which zsh) $(whoami)
 ask "would u like to proseed now with OH-MY-ZSH?" && \
 	git clone $OHMYZSH ~/.config/.oh-my-zsh
 
-
+chsh -s $(which zsh) $(whoami)
 

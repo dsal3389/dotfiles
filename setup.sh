@@ -6,13 +6,16 @@ YAY="https://aur.archlinux.org/yay.git"
 DOTFILES=$HOME/dotfiles # installed dotfiles
 YAY_INSTALLED=`command -v yay`
 BASE_PACKEGES=(
+	xorg
+	xorg-server
+	xorg-xinit
 	i3
 	feh
 	kitty
 	zsh
 	dmenu
 	vifm
-	w3m
+	conky
 )
 AUR_PACKEGES=(
 	compton-tryone-git

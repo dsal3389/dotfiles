@@ -66,7 +66,7 @@ fi
 
 mkdir ${HOME}/.config
 ask "would u like to proseed now with OH-MY-ZSH?" && \
-	git clone $OHMYZSH ~/.config/.oh-my-zsh
+	rm -f ~/.config/.oh-my-zsh && git clone $OHMYZSH ~/.config/.oh-my-zsh
 
 [ ! -d "${HOME}/.config" ] && mkdir "${HOME}/.config"
 cp -rf $DOTFILES/.config/* "${HOME}/.config" 1> /dev/null

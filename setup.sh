@@ -1,6 +1,5 @@
 #! /bin/bash
 
-
 OHMYZSH="https://github.com/ohmyzsh/ohmyzsh.git"
 YAY="https://aur.archlinux.org/yay.git"
 DOTFILES=$HOME/dotfiles # installed dotfiles
@@ -9,6 +8,7 @@ BASE_PACKEGES=(
 	xorg
 	xorg-server
 	xorg-xinit
+	zsh
 	i3
 	feh
 	kitty
@@ -71,7 +71,7 @@ ask "would u like to proseed now with OH-MY-ZSH?" && \
 [ ! -d "${HOME}/.config" ] && mkdir "${HOME}/.config"
 cp -rf $DOTFILES/.config/* "${HOME}/.config" 1> /dev/null
 cp -rf $DOTFILES/* $HOME 1> /dev/null
-
+cp -rf $DOTFILES/.* $HOME 1> /dev/null
 
 chsh -s $(which zsh) $(whoami)
 

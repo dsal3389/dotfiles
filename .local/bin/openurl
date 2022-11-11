@@ -1,0 +1,7 @@
+#!/usr/bin/bash
+
+# opens dmenu and prompt the user for URL
+# to paste into dmenu press by default ctl+shift+y
+
+URL=$(dmenu -i -p "url:" << EOF)
+[ ! -z $URL ] && $BROWSER $URL 

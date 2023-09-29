@@ -1,0 +1,6 @@
+#! /usr/bin/sh
+
+SELECTED_PROJECT=$(ls $HOME/programming | rofi -p "open project" -dmenu -)
+
+code $HOME/programming/$SELECTED_PROJECT
+

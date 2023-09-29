@@ -1,5 +1,11 @@
 #! /usr/bin/sh
 
+# OPP (OPenProject)
+# prompt the user to select one project from
+# the projects found under $HOME/programming
+# 
+# the default program to open the project with is `code`
+
 SELECTED_PROJECT=$(ls $HOME/programming | rofi -p "open project" -dmenu -)
 
 code $HOME/programming/$SELECTED_PROJECT

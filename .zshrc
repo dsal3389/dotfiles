@@ -1,9 +1,8 @@
-
 # Path to your oh-my-zsh installation.
-export ZSH="$HOME/.config/.oh-my-zsh"
+export ZSH="${HOME}/.config/.oh-my-zsh"
 export LANG=en_US.UTF-8
 export UPDATE_ZSH_DAYS=7
-export PATH="/home/dsal3389/.local/bin:$PATH"
+export PATH="${HOME}/.local/bin:${HOME}/.config/emacs/bin/:${HOME}/.cargo/bin:$PATH"
 
 export BROWSER="brave"
 export EDITOR="nvim"
@@ -34,3 +33,4 @@ alias kubectl="minikube kubectl --"
 alias docker="sudo docker"
 alias vim="nvim"
 alias dotfiles="git --git-dir=${HOME}/.dotfiles/ --work-tree=${HOME}"
+

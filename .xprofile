@@ -1,4 +1,4 @@
 
-feh -F --no-fehbg --bg-fill $HOME/.config/background &
+feh -F --no-fehbg --bg-fill $HOME/.config/wallpaper &
 // picom --config $HOME/.config/picom/config.conf &
 

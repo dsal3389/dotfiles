@@ -137,9 +137,18 @@ require("lazy").setup({
         }
     },
     {
-        "morhetz/gruvbox",  -- theme 
+        "ellisonleao/gruvbox.nvim",  -- theme 
         priority = 1000,
         config = function()
+            require("gruvbox").setup({
+                contrast = "soft",
+                palette_overrides = {
+                    dark0_soft = "#181512"
+                },
+                overrides = {
+                    SignColumn = { bg = "#181512" }
+                }
+            })
             vim.cmd([[colorscheme gruvbox]])
         end
     }

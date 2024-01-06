@@ -34,3 +34,5 @@ alias docker="sudo docker"
 alias vim="nvim"
 alias dotfiles="git --git-dir=${HOME}/.dotfiles/ --work-tree=${HOME}"
 
+
+bq

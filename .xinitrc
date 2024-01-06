@@ -4,4 +4,4 @@ XPROFILE=$HOME/.xprofile
 
 [ -f $XPROFILE ] && . $XPROFILE
 
-exec dwm
+exec i3

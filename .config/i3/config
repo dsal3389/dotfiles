@@ -186,7 +186,10 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-    status_command i3status
+    status_command bumblebee-status -c $HOME/.config/bumblebee-status \
+        -t custom-theme \
+        -m ping nic spacer memory disk spacer weather datetime dunst \
+        -p nic.exclude="wlo1,lo,docker0" ping.address="8.8.8.8" ping.probes=10
 	position top
 }
 
@@ -196,4 +199,6 @@ for_window [class="^.*"] border pixel 1
 # gaps
 gaps inner 4
 gaps outer 7
+
+client.focused  #c4c4c4 #c4c4c4 #c4c4c4 #c4c4c4 #c4c4c4
 

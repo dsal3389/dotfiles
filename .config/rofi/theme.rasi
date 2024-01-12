@@ -22,17 +22,17 @@
     color15:    #9a875f;
 
     background-color:   transparent;
-    text-color:         @color4;
+    text-color:         @color1;
     accent-color:       @color8;
 
     margin:     0px;
     padding:    0px;
-    spacing:    7px;
+    spacing:    4px;
 }
 
 window {
     background-color:   #181512;
-    border-color:       #bea492;
+    border-color:       #746c48;
 
     location:   center;
     width:      620px;
@@ -40,8 +40,8 @@ window {
 }
 
 inputbar {
-    padding:    8px 12px;
-    spacing:    12px;
+    padding:    4px 8px;
+    spacing:    4px;
     children:   [ prompt, entry ];
 }
 
@@ -61,8 +61,8 @@ listview {
 }
 
 element {
-    padding:    8px;
-    spacing:    8px;
+    padding:    4px;
+    spacing:    4px;
 }
 
 element normal urgent {
@@ -70,7 +70,7 @@ element normal urgent {
 }
 
 element normal active {
-    text-color: @accent-color;
+    text-color: @color0;
 }
 
 element selected {
@@ -78,7 +78,7 @@ element selected {
 }
 
 element selected normal {
-    background-color:   @accent-color;
+    background-color:   @color3;
 }
 
 element selected urgent {

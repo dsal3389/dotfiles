@@ -200,5 +200,5 @@ for_window [class="^.*"] border pixel 1
 gaps inner 4
 gaps outer 7
 
-client.focused  #c4c4c4 #c4c4c4 #c4c4c4 #c4c4c4 #c4c4c4
+client.focused  #746c48 #746c48 #746c48 #746c48 #746c48
 

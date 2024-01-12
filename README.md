@@ -1,23 +1,20 @@
 # DOTFILES
-my (I use arch BTW) linux dotfiles
+my dotfiles, color scheme that makes it easy on the eyes
 
-## i3 & suckless dwm
-when using i3 & dwm as a wm, I really doen't care about customizing it, I just want to
-do my work in peace (I once cared but I am not going to customize them again just to upload them here)
+## programs
+ * dunst - for notification
+ * feh - for background
+ * picom - X11 add blure and transparency
+ * i3 - X11 window manager
+ * nvim - terminal text editor
+ * kitty - terminal emulator
+ * zsh - shell (require `oh-my-zsh`)
+ * rofi - program search
+ * Hyperland - laternative to i3 (X11), window manager (config not complete)
+ * waybar - status bar for `Hyperland` (config not complete)
 
-## termninal
- * kitty
-
-## i3 requirements
- * i3-gaps
- * i3-status
- * dmenu
-
-## dwm requirements
- * dwm
- * dmenu
-
-## hyprland requirements
- * hyprland
- * waybar
- * rofi
+## fonts
+in case there are missing fonts, run (on arch)
+```sh
+sudo pacman -S $(pacman -Ssq noto-) ttf-nerd-fonts-symbols
+```

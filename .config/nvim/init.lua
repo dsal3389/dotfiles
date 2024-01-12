@@ -137,6 +137,19 @@ require("lazy").setup({
         }
     },
     {
+        "nvim-lualine/lualine.nvim",
+        dependencies = {
+            "nvim-tree/nvim-web-devicons"
+        },
+        config = function()
+            require("lualine").setup({
+                options = {
+                    icons_enabled = true
+                }
+            })
+        end
+    },
+    {
         "ellisonleao/gruvbox.nvim",  -- theme 
         priority = 1000,
         config = function()

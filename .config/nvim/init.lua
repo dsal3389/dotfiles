@@ -133,7 +133,8 @@ require("lazy").setup({
         },
         keys = {
             { "<leader>ff", "<cmd>Telescope find_files<cr>" },
-            { "<leader>fg", "<cmd>Telescope live_grep<cr>" }
+            { "<leader>vff", "<cmd>vsplit | Telescope find_files<cr>" },
+            { "<leader>fg", "<cmd>Telescope live_grep<cr>" },
         }
     },
     {

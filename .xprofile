@@ -1,0 +1,6 @@
+
+feh -F --no-fehbg --bg-fill $HOME/.config/background.jpg &
+picom --config $HOME/.config/picom.conf &
+dunst &
+redshit &
+

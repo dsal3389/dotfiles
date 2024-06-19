@@ -35,7 +35,7 @@ window {
     border-color:       #746c48;
 
     location:   center;
-    width:      620px;
+    width:      940px;
     border:     1px;
 }
 

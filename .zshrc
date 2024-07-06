@@ -11,6 +11,8 @@ export EDITOR="nvim"
 HISTFILE=$HOME/.cache/zsh/history
 ZSH_THEME="agnoster"
 
+[ ! -f $HISTFILE ] && mkdir -p $(dirname $HISTFILE) && touch $HISTFILE
+
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
 
@@ -33,3 +35,5 @@ alias vim="nvim"
 alias dotfiles="git --git-dir=${HOME}/.dotfiles/ --work-tree=${HOME}"
 
 bq
+
+which fzf > /dev/null && source <(fzf --zsh)

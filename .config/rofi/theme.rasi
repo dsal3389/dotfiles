@@ -1,8 +1,8 @@
 * {
-    font:   "IBM Plex Mono 12";
+    font:   "IBM Plex Mono 14";
 
-    color0:     #332d29;
-    color1:     #816267;
+    color0:     #101010;
+    color1:     #404040;
     color2:     #746c48;
     color3:     #908a66;
 
@@ -22,7 +22,7 @@
     color15:    #9a875f;
 
     background-color:   transparent;
-    text-color:         @color1;
+    text-color:         @color13;
     accent-color:       @color8;
 
     margin:     0px;
@@ -32,11 +32,11 @@
 
 window {
     background-color:   #181512;
-    border-color:       #746c48;
+    border-color:       @color14;
 
     location:   center;
-    width:      940px;
-    border:     1px;
+    width:      1080px;
+    border:     2px;
 }
 
 inputbar {
@@ -54,15 +54,19 @@ prompt {
 }
 
 listview {
-    lines:      8;
-    columns:    1;
+    lines:      4;
+    columns:    3;
+    margin:     4;
 
-    fixed-height:   false;
+    fixed-height:   true;
 }
 
 element {
-    padding:    4px;
-    spacing:    4px;
+    padding:    8px;
+    spacing:    8px;
+
+    border:     2px;
+    border-color: #333333;
 }
 
 element normal urgent {
@@ -74,11 +78,11 @@ element normal active {
 }
 
 element selected {
-    text-color: @color0;
+    text-color: @color14;
 }
 
 element selected normal {
-    background-color:   @color3;
+    background-color:   @color0;
 }
 
 element selected urgent {

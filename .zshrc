@@ -3,7 +3,7 @@ export ZSH="${HOME}/.config/.oh-my-zsh"
 export LANG=en_US.UTF-8
 export UPDATE_ZSH_DAYS=7
 export LC_CTYPE="en_US.UTF-8"
-export PATH="${HOME}/.local/bin:${HOME}/.cargo/bin:$PATH"
+export PATH="${HOME}/.local/bin:${HOME}/.cargo/bin:${HOME}/go/bin:$PATH"
 
 export BROWSER="brave"
 export EDITOR="nvim"
@@ -33,6 +33,7 @@ ZSH_SYN_HIGH=/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlight
 alias docker="sudo docker"
 alias vim="nvim"
 alias dotfiles="git --git-dir=${HOME}/.dotfiles/ --work-tree=${HOME}"
+alias neofetch="fastfetch"
 
 bq
 

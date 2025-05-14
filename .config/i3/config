@@ -186,19 +186,20 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
+    font pango:Inconsolata 10
     status_command bumblebee-status -c $HOME/.config/bumblebee-status \
         -t custom-theme \
         -m ping nic spacer memory disk spacer weather datetime dunst \
         -p nic.exclude="wlo1,lo,docker0" ping.address="8.8.8.8" ping.probes=10
-	position top
+    position top
 }
 
 # disable border
 for_window [class="^.*"] border pixel 4
 
 # gaps
-gaps inner 7
-gaps outer 7
+gaps inner 14
+gaps outer 0
 
 # class                   # border  # background  # text    #indicator  #child_border
 client.focused            #4e9fb1   #4e9fb1       #4e9fb1   #4e9fb1     #4e9fb1

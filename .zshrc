@@ -3,7 +3,7 @@ export ZSH="${HOME}/.config/.oh-my-zsh"
 export LANG=en_US.UTF-8
 export UPDATE_ZSH_DAYS=7
 export LC_CTYPE="en_US.UTF-8"
-export PATH="${HOME}/.local/bin:${HOME}/.cargo/bin:${HOME}/go/bin:$PATH"
+export PATH="${HOME}/.local/bin:${HOME}/.cargo/bin:${HOME}/.config/emacs/bin:${HOME}/go/bin:$PATH"
 
 export BROWSER="brave"
 export EDITOR="nvim"
@@ -17,7 +17,6 @@ ZSH_THEME="agnoster"
 # DISABLE_MAGIC_FUNCTIONS="true"
 
 ENABLE_CORRECTION="true"
-plugins=(git dotenv docker kubectl)
 
 # allow those plugins only when running X11
 [[ -n $DISPLAY ]] && plugins=("$plugins" zsh-autosuggestions)
@@ -38,8 +37,9 @@ alias neofetch="fastfetch"
 
 which fzf > /dev/null && source <(fzf --zsh)
 
+# setup pyenv if it exists
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init - zsh)"
+which pyenv > /dev/null && eval "$(pyenv init - zsh)"
 
 bq

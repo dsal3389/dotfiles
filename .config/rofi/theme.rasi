@@ -100,3 +100,7 @@ element-icon {
 element-text {
     text-color: inherit;
 }
+
+prompt {
+    enabled: false;
+}

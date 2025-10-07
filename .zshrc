@@ -5,7 +5,7 @@ export UPDATE_ZSH_DAYS=7
 export LC_CTYPE="en_US.UTF-8"
 export PATH="${HOME}/.local/bin:${HOME}/.cargo/bin:${HOME}/.config/emacs/bin:${HOME}/go/bin:$PATH"
 
-export BROWSER="brave"
+export BROWSER="zen-browser"
 export EDITOR="nvim"
 
 HISTFILE=$HOME/.cache/zsh/history
@@ -43,3 +43,6 @@ export PYENV_ROOT="$HOME/.pyenv"
 which pyenv > /dev/null && eval "$(pyenv init - zsh)"
 
 bq
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"

@@ -197,15 +197,15 @@ bar {
 }
 
 # disable border
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 7
 
 # gaps
-gaps inner 0
-gaps outer 0
+gaps inner 12
+gaps outer 4
 
 # class                   # border  # background  # text    #indicator  #child_border
-client.focused            #4e9fb1   #4e9fb1       #4e9fb1   #4e9fb1     #4e9fb1
-client.unfocused          #101010   #101010       #101010   #101010     #101010
-client.focused_inactive   #101010   #101010       #101010   #101010     #101010
+client.focused            #80471c   #80471c       #4e9fb1   #80471c     #80471c
+client.unfocused          #362511   #362511       #101010   #362511     #362511
+client.focused_inactive   #231709   #231709       #231709   #101010     #231709
 
 
